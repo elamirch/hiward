@@ -4,42 +4,47 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Primary medical blue */
+  /* Updated color scheme for modern medical landing page design */
+  
+  /* Primary blue - medical trust color */
   --primary: oklch(0.55 0.15 240);
   --primary-foreground: oklch(0.98 0 0);
 
-  /* Clean white background */
+  /* Clean backgrounds */
   --background: oklch(0.99 0 0);
-  --foreground: oklch(0.2 0 0);
+  --foreground: oklch(0.15 0 0);
 
-  /* Soft gray accents */
-  --muted: oklch(0.96 0 0);
-  --muted-foreground: oklch(0.5 0 0);
+  /* Muted grays */
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.5 0.01 240);
 
-  /* Trust green for success */
-  --accent: oklch(0.65 0.12 150);
+  /* Cyan accent */
+  --accent: oklch(0.6 0.15 195);
   --accent-foreground: oklch(0.98 0 0);
 
-  /* Subtle borders */
-  --border: oklch(0.92 0 0);
-  --input: oklch(0.92 0 0);
+  /* Borders */
+  --border: oklch(0.9 0.005 240);
+  --input: oklch(0.9 0.005 240);
 
   /* Cards */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.2 0 0);
+  --card-foreground: oklch(0.15 0 0);
 
-  --secondary: oklch(0.95 0 0);
-  --secondary-foreground: oklch(0.2 0 0);
+  --secondary: oklch(0.96 0.005 240);
+  --secondary-foreground: oklch(0.15 0 0);
 
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.2 0 0);
+  --popover-foreground: oklch(0.15 0 0);
 
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.98 0 0);
 
   --ring: oklch(0.55 0.15 240);
 
-  --radius: 0.75rem;
+  --radius: 1rem;
+  
+  /* Added custom animation keyframes for smooth fade-in */
+  
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -68,7 +73,7 @@
   --secondary-foreground: oklch(0.95 0 0);
   --muted: oklch(0.25 0 0);
   --muted-foreground: oklch(0.65 0 0);
-  --accent: oklch(0.7 0.12 150);
+  --accent: oklch(0.7 0.15 195);
   --accent-foreground: oklch(0.98 0 0);
   --destructive: oklch(0.5 0.2 27);
   --destructive-foreground: oklch(0.95 0 0);
@@ -91,7 +96,6 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -137,4 +141,25 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Added custom animations for landing page */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+/* Smooth scroll behavior for snap sections */
+html {
+  scroll-behavior: smooth;
 }

@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Vazirmatn } from "next/font/google"
+import { Vazirmatn } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
@@ -10,8 +10,8 @@ const vazirmatn = Vazirmatn({
 })
 
 export const metadata: Metadata = {
-  title: "راهنمای بیماران - بخش جراحی بیمارستان رازی رشت",
-  description: "راهنمای کامل بیماران از نوبت‌گیری تا ترخیص و فالوآپ - بخش جراحی بیمارستان رازی رشت",
+  title: "های‌وارد - راهنمای جامع بخش‌های بیمارستان",
+  description: "راهنمای کامل بیماران برای تمامی بخش‌های بیمارستان از نوبت‌گیری تا ترخیص و فالوآپ",
   generator: "v0.app",
   icons: {
     icon: [
