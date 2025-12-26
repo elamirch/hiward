@@ -85,4 +85,3 @@
 [![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/ojIk0oGR04b)
 
 > این پروژه با نیت کمک به بیماران و ساده‌سازی مسیر درمان توسعه داده شده است ❤️
-
