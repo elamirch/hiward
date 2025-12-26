@@ -11,22 +11,22 @@ export default function Home() {
       href: "/razi-surgery",
       color: "from-blue-500 to-cyan-500",
     },
-    {
-      id: "hematology",
-      name: "بخش هماتولوژی",
-      description: "راهنمای کامل آزمایشات و درمان‌های خونی",
-      icon: Activity,
-      href: "/razi-hematology",
-      color: "from-red-500 to-pink-500",
-    },
-    {
-      id: "cardiology",
-      name: "بخش قلب و عروق",
-      description: "راهنمای کامل خدمات قلب و عروق",
-      icon: HeartPulse,
-      href: "/razi-cardiology",
-      color: "from-emerald-500 to-teal-500",
-    },
+    // {
+    //   id: "hematology",
+    //   name: "بخش هماتولوژی",
+    //   description: "راهنمای کامل آزمایشات و درمان‌های خونی",
+    //   icon: Activity,
+    //   href: "/razi-hematology",
+    //   color: "from-red-500 to-pink-500",
+    // },
+    // {
+    //   id: "cardiology",
+    //   name: "بخش قلب و عروق",
+    //   description: "راهنمای کامل خدمات قلب و عروق",
+    //   icon: HeartPulse,
+    //   href: "/razi-cardiology",
+    //   color: "from-emerald-500 to-teal-500",
+    // },
   ]
 
   return (
@@ -49,15 +49,20 @@ export default function Home() {
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 text-balance">
-            به راهنمای جامع بیمارستان
-            <br />
-            <span className="bg-gradient-to-l from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-              خوش آمدید
-            </span>
-          </h2>
+          <h2 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 text-balance leading-tight">
+          به راهنمای جامع{" "}
+          <span className="relative inline-block px-2 text-green-700 font-extrabold">
+            بیمارستان رازی رشت
+            <span className="absolute inset-x-0 -bottom-1 h-2 bg-blue-100 -z-10 rounded"></span>
+          </span>
+          <br />
+          <span className="mt-3 inline-block bg-gradient-to-l from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            خوش آمدید
+          </span>
+        </h2>
+
           <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            اطلاعات کامل و دقیق درباره نحوه نوبت‌گیری، مراحل درمان و مراقبت‌های بعد از عمل
+            اطلاعات کامل و دقیق درباره نحوه نوبت‌گیری، مراحل درمان و مراقبت‌های بعد از عمل بیمارستان رازی رشت   
           </p>
         </div>
       </section>
@@ -66,7 +71,7 @@ export default function Home() {
       <section className="py-12 pb-24">
         <div className="container mx-auto px-4">
           <h3 className="text-2xl md:text-3xl font-bold text-slate-900 text-center mb-12">
-            بخش‌های بیمارستان
+            بخش‌های بیمارستان رازی رشت
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {departments.map((dept) => {
@@ -115,6 +120,24 @@ export default function Home() {
             </p>
             <p className="text-sm text-slate-500">
               © {new Date().getFullYear()} تمامی حقوق محفوظ است
+            </p>
+            <p className="text-sm text-slate-500">
+              ساخته شده توسط{" "}
+              <a
+                href="https://webernal.com"
+                title="مشاهده وب‌سایت"
+                className="hover:tracking-wide relative font-medium transition-colors duration-300 hover:text-blue-600 after:absolute after:-bottom-0.5 after:left-0 after:h-[1.5px] after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full text-primary-foreground"
+              >
+                وبرنال
+              </a>{" "}
+              و{" "}
+              <a
+                href="https://gilmeds.com"
+                title="مشاهده وب‌سایت"
+                className="hover:tracking-wide relative font-medium transition-colors duration-300 hover:text-emerald-600 after:absolute after:-bottom-0.5 after:left-0 after:h-[1.5px] after:w-0 after:bg-emerald-500 after:transition-all after:duration-300 hover:after:w-full text-primary-foreground"
+              >
+                گیل‌مدز
+              </a>
             </p>
           </div>
         </div>
